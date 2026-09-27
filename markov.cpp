@@ -59,3 +59,30 @@ int buildMarkovChain(const string words[], int numWords, int order, string prefi
 
         return count;
     }
+
+    string getRandomSuffix(const string prefixes[], const string suffixes[], int chainSize, string currentPrefix){
+        int matchCount = 0;
+        for (int i =0; i < chainSize; i++){
+            if(currentPrefix == prefixes[i]){
+                matchCount++;
+            }
+        }
+        if(matchCount == 0){
+            return "";
+        }
+
+        int pick = rand() % matchCount;
+        int matchCount2 = 0;
+        for(int i =0; i<chainSize; i++){
+            if(currentPrefix == prefixes[i]){
+                if(matchCount2 == pick){
+                    return suffixes[i];
+                }
+                matchCount2 ++;
+            }
+        }
+        return "";
+
+
+
+    }
