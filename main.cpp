@@ -15,8 +15,8 @@ int main(){
     std::string prefixes[1000], suffixes[1000];
     int chainSize = buildMarkovChain(words, count, 2, prefixes, suffixes, 1000);
 
-    for (int i = 0; i < 10; i++) {
-    std::cout << getRandomSuffix(prefixes, suffixes, chainSize, "I am") << std::endl;
+    for(int i = 0; i < 5; i++){
+    cout << getRandomPrefix(prefixes, chainSize) << endl;
 }
 
 }

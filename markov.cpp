@@ -82,7 +82,13 @@ int buildMarkovChain(const string words[], int numWords, int order, string prefi
             }
         }
         return "";
+    }
 
-
-
+    string getRandomPrefix(const string prefixes[], int chainSize){
+        if(chainSize <= 0){
+            return "";
+        }else{
+            int index = rand() % chainSize;
+            return prefixes[index];
+        }
     }

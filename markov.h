@@ -13,6 +13,6 @@ int buildMarkovChain(const std::string words[], int numWords, int order, std::st
 
 std::string getRandomSuffix(const std::string prefixes[], const std::string suffixes[], int chainSize, std::string currentPrefix);
 
-
+std::string getRandomPrefix(const std::string prefixes[], int chainSize);
 
 #endif
