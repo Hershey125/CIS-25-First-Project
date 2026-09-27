@@ -20,3 +20,19 @@ string joinWords(const string words[], int startIndex, int count){
         return "";
     }
 }
+
+
+int readWordsFromFile(string filename, string words[], int maxWords){
+    ifstream inputFile;
+    inputFile.open(filename);
+    bool isOpen = inputFile.is_open();
+    int counter = 0;
+    if(isOpen){
+        while(counter < maxWords && inputFile >> words[counter]) { //inputFile >> words[counter] stores and reads the next line?? - ask prof
+                counter ++;
+        }
+        return counter;
+    }else{
+        return -1;
+    }
+}
