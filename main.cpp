@@ -60,7 +60,7 @@ int main(){
     int count = readWordsFromFile(filename, words, MAX_WORDS);
 
     if(count == -1){
-        cout << "Error: Could not open the file, did you put a virus in there?" << endl;
+        cout << "Error: Could not open the file, you either put the wrong file name or we detected the virus you left in there :O" << endl;
         return 0;
     }
 
