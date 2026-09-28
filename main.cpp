@@ -13,11 +13,13 @@ int main(){
 
 
     std::string prefixes[1000], suffixes[1000];
-    int chainSize = buildMarkovChain(words, count, 2, prefixes, suffixes, 1000);
+    int chainSize = buildMarkovChain(words, count, 1, prefixes, suffixes, 1000);
 
     for(int i = 0; i < 5; i++){
     cout << getRandomPrefix(prefixes, chainSize) << endl;
 }
+    std::string output = generateText(prefixes, suffixes, chainSize, 1, 20);
+    std::cout << output << std::endl;
 
 }
 
