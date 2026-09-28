@@ -28,6 +28,8 @@ int main(){
         }else if(orderinput == 1 || orderinput == 2 || orderinput ==3){
             order = orderinput;
             y = false;
+            cout << "test" << endl;
+            cout << orderinput << endl;
         }else{
             cout << "The order has to be one of the following options: 1,2,3. Please try again and choose one of the three " << endl;
         }
